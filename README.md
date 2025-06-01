@@ -1,5 +1,5 @@
 # BST-Implementation
-here you will find the implementation of the BST in java with it's functions
+here you will find the implementation of the BST in java with it's functions.
 Small explanation about trees:
 A tree is a non-linear data structure to store data & informatinos.
 A tree consists of nodes & links with a restriction(each link point form an uppre node"father node" to a node down(son) meanning you can only go from the father to the son and not the opposite)
