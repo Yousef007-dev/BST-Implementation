@@ -201,15 +201,15 @@ public class BST {
         //the node has two sons
         else {
             if (father.left==son){
+                Node fatherOfTheSmallestBiggerNumber = (BST.Node)searchNodeForDeletion(theSmallestBiggerNumber.data).get(0);
+                if (fatherOfTheSmallestBiggerNumber.left==theSmallestBiggerNumber){
+                    fatherOfTheSmallestBiggerNumber.left=null;
+                }
+                else fatherOfTheSmallestBiggerNumber.right=null;
+
                 father.left=theSmallestBiggerNumber;
                 theSmallestBiggerNumber.left=son.left;
                 theSmallestBiggerNumber.right=son.right;
-
-                Node fatherOfTheSmallestBiggerNumber = (BST.Node)searchNodeForDeletion(theSmallestBiggerNumber.data).get(0);
-                if (fatherOfTheSmallestBiggerNumber.left==theSmallestBiggerNumber){
-                    father.left=null;
-                }
-                else fatherOfTheSmallestBiggerNumber.right=null;
             }
             else {
                 Node fatherOfTheSmallestBiggerNumber = (BST.Node)searchNodeForDeletion(theSmallestBiggerNumber.data).get(0);
